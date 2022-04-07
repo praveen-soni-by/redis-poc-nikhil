@@ -1,0 +1,34 @@
+syntax = "proto3";
+package proto;
+option java_multiple_files = true;
+option java_package = "com.example.demo.protobuf";
+option java_outer_classname = "DistanceProto";
+
+message DistanceP {
+   string id = 1;
+   AddressDetailsP origin_address = 2;
+   AddressDetailsP destination_address = 3;
+   int32 distance_in_km = 4;
+   int32 transit_time_hours = 5;
+   Dummy1P dummy1 = 6;
+   Dummy2P dummy2 = 7;
+}
+
+message AddressDetailsP {
+   string address = 1;
+   string city = 2;
+   string state = 3;
+   string country = 4;
+   string latitude = 5;
+   string longitude = 6;
+}
+
+message Dummy1P {
+   int32 id = 1;
+   string name = 2;
+}
+
+message Dummy2P {
+   int32 id = 1;
+   string name = 2;
+}
